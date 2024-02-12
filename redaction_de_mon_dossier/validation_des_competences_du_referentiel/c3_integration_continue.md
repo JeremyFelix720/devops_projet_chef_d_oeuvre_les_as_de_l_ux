@@ -13,3 +13,9 @@ C3. Automatiser les phases de tests unitaires et d’analyses statiques du code 
 
 ### REFLEXION ET APPLICATION D'UNE STRATEGIE DANS MON PROJET
 
+Le fichier de configuration qui gère l'automatisation de l'intégration continue se génère automatiquement avec Playwright à chaque push sur la branche main ou develop :
+
+![Fichier playwright.yml](../img/fichier_config_ci_frontend.png "Fichier playwright.yml")
+
+> Expliquer + ? (...)
+

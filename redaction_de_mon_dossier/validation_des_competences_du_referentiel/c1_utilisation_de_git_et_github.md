@@ -68,6 +68,8 @@ Etant seul dans le cadre de ce projet, j'ai décider d'autovalider les pull requ
 
 Voici la procédure que j’ai appliquée pour envoyer une branche de fonctionnalité sur GitHub afin d’effectuer la validation collective (uniquement lorsqu'une branche de travail est entièrement terminée) :
 
+> On peut travailler sur plusieurs branches en parralèle (il faut simplement faire toutes les étapes suivantes quand une des branches est terminée).
+
 Rejoindre la branche "develop" :
 ```bash
 git checkout develop
