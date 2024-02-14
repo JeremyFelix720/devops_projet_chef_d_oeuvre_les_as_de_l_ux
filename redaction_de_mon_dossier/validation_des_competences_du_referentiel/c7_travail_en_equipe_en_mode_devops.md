@@ -37,10 +37,6 @@ De ces piliers découlent 12 principes sous-jacents :
 - Construire le projet avec des équipes auto-organisées
 - Améliorer constamment l'efficacité de l'équipe
 
-La méthodologie Agile a donné lieu à la méthode de cycles itératifs et, dans le secteur de l'informatique, à l'intégration continue :
-
-![Intégration continue](../img/integration_continue.png "Intégration continue")
-
 Avec la démocratisation d’Internet (Google a connu un succès fulgurant à partir de 2003) et la multiplication des données consommées, de nouveaux standards industriels sont apparues, notamment le SRE (Site Reliability Engineering) dont les principaux objectifs sont de créer des systèmes logiciels évolutifs et fiables.
 
 Avec le DevOps, les développeurs et les Operatifs (« Ops ») se sont rapprochés pour colaborer ensemble.

@@ -8,6 +8,22 @@ C4. Concevoir un processus de livraison continue à l’aide d’outils d’auto
 
 ### OBJECTIF PRINCIPAL DE CETTE PHASE DU PROJET
 
+Le déploiement continue permet (...)
+
+
+
+
+Voici un schéma qui résume les différentes étapes du déploiement continue (partie "Ops" uniquement):
+
+![DevOps](../img/devops.png "DevOps")
+
+
+Comme le montre le schéma suivant, le déploiement continue va plus loin que l'intégration continue :
+
+![Intégration continue et déploiement continu](../img/integration_continue_et_deploiement_continu.jpg "Intégration continue et déploiement continu")
+
+
+
 
 ### REFLEXION ET APPLICATION D'UNE STRATEGIE DANS MON PROJET
 
