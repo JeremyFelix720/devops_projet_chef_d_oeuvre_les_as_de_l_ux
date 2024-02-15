@@ -18,4 +18,6 @@ https://encause.fr/les-5-meilleurs-lingueurs-de-node-js/
 
 https://devopssec.fr/article/creer-ses-propres-images-docker-dockerfile
 
+https://www.generation5.org/quel-est-linteret-dune-bonne-veille-technologique%E2%80%89/
+
 https://blog-gestion-de-projet.com/manifeste-agile-valeurs-et-principes/#t-1653060296441

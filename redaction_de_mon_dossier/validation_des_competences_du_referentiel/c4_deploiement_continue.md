@@ -8,7 +8,20 @@ C4. Concevoir un processus de livraison continue à l’aide d’outils d’auto
 
 ### OBJECTIF PRINCIPAL DE CETTE PHASE DU PROJET
 
-Le déploiement continue permet (...)
+Le déploiement continue ("Continuous Deployment" ou "CD" en anglais) est une stratégie de développement logiciel qui permet de publier automatiquement les modifications apportées dans le code source en mettant à jour la version de l'application disponible aux utilisateurs.
+
+Les principaux avantages sont les suivants :
+- il accélère la mise sur le marché en éliminant le décalage, généralement de plusieurs jours, semaines, voire mois, entre le codage et la valeur client.
+- Le contrôle des versions facilite l'intégration continue en assurant le suivi des révisions apportées aux actifs d'un proje
+
+
+
+
+
+
+
+
+
 
 
 
