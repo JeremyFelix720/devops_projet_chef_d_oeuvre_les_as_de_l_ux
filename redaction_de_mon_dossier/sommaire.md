@@ -10,9 +10,3 @@
   - Travail en équipe en mode DevOps (C7)
 3. Conclusion
 4. Bibliographie
-
-
-## Ancien sommaire
-5. Partie 1 : compréhension du besoin et traduction technique de la réponse apportée
-6. Partie 2 : enjeux de la mise en œuvre du projet : justification des choix et arbitrages réalisés, problèmes rencontrés et solutions apportés
-7. Partie 3 : bilan de projet et améliorations envisagées

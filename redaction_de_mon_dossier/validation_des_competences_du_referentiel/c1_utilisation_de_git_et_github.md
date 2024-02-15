@@ -68,7 +68,7 @@ Etant seul dans le cadre de ce projet, j'ai décider d'autovalider les pull requ
 
 Voici la procédure que j’ai appliquée pour envoyer une branche de fonctionnalité sur GitHub afin d’effectuer la validation collective (uniquement lorsqu'une branche de travail est entièrement terminée) :
 
-> On peut travailler sur plusieurs branches en parralèle (il faut simplement faire toutes les étapes suivantes quand une des branches est terminée).
+On peut travailler sur plusieurs branches en parralèle (il faut simplement faire toutes les étapes suivantes quand une des branches est terminée).
 
 Rejoindre la branche "develop" :
 ```bash
@@ -94,7 +94,7 @@ Export de ma fonctionnalité (rajoutée au develop) dans le develop du répertoi
 git push --set-upstream origin fonctionnality_branch_name
 ```
 
-> Faire valider sa Pull Request (sur gitHub) par ses collègues (ou par un formateur)
+**Faire valider sa Pull Request (sur gitHub) par ses collègues (ou par un formateur)**
 
 Sur GitHub :
 - Aller dans "Pull requests" > "New pull request"
@@ -103,7 +103,6 @@ Sur GitHub :
 - Retourner dans "Pull requests" (normalement, cela ouvre la Pull Request automatiquement)
 - Vérifier le code au préalable
 - Cliquer sur "Merge pull request" puis "Confirm merge"
-
 
 Si la pull request de ma fonctionnalité a été validé à l'unanimité sur gitHub, mettre à jour la branche develop locale qui a été fusionnée sur gitHub :
 ```bash
@@ -141,50 +140,78 @@ Cela m'a également permit de nommer plus efficacement mes commits. A noter que 
 
 #### COMMANDE GIT QUE J'AI UTILISEES
 
-Voici une liste des commandes git que j'ai utilisées : 
+Voici une liste (non exaustive) des commandes git que j'ai utilisées dans le cadre de mon projet :
 
-- Cloner un répertoire :
+Cloner un répertoire :
+```bash
 git clone https://github.com/nom_depositaire/repository_name my_project_name 
+```
 
-
-- Créer une branche de travail sur le dépot local (pour developper une fonctionnalité correspondant à un ticket)
+Créer une branche de travail sur le dépot local (pour developper une fonctionnalité correspondant à un ticket)
+```bash
 git branch fonctionnality_branch_name
+```
 
-- Créer une branche de travail sur le dépot distant (à partir d'une branche locale existante)
+Créer une branche de travail sur le dépot distant (à partir d'une branche locale existante)
+```bash
 git push --set-upstream origin develop
+```
 
-- Se déplacer sur une branche :
+Se déplacer sur une branche :
+```bash
 git checkout fonctionnality_branch_name
+```
 
-- Créer une branche et se déplacer dessus :
+Créer une branche et se déplacer dessus :
+```bash
 git checkout -b fonctionnality_branch_name
+```
 
-- Voir le nom de la branche sur laquelle on se trouve actuellement :
+Voir le nom de la branche sur laquelle on se trouve actuellement :
+```bash
 git branch
+```
 
-- Renommer une branche :
+Renommer une branche :
+```bash
 git branch -m new_branch_name
+```
 
-- Voir l'historique des commits de sa branche de travail
+Voir l'historique des commits de sa branche de travail :
+```bash
 git log
+```
 
-
-- Ajouter tous les fichiers (ou seulement certains) dans la zone d'index pour le prochain commit :
+Ajouter tous les fichiers (ou seulement certains) dans la zone d'index pour le prochain commit :
+```bash
 git add .
+```
 
-- Faire une sauvegarde local de son code source :
+Faire une sauvegarde local de son code source :
+```bash
 git commit -m "message de commit"
+```
 
-- Envoyer le code source depuis le dépot local vers le dépot distant :
+Envoyer le code source depuis le dépot local vers le dépot distant :
+```bash
 git push
+```
 
-- Réinitialiser les derniers changements (ne marche pas si on a fait un push avant) :
+Réinitialiser les derniers changements (ne marche pas si on a fait un push avant) :
+```bash
 git stash
+```
 
-- Réinitialiser les derniers changements depuis son dernier commit :
+Réinitialiser les derniers changements depuis son dernier commit :
+```bash
 git stash apply
+```
 
-- Revenir au commit précedent :
+Revenir au commit précedent :
+```bash
 git reset --soft HEAD^
+```
+ou
+```bash
 git reset --soft branch_name
-
+```

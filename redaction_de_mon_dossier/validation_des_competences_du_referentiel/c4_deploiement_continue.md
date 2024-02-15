@@ -27,3 +27,4 @@ Comme le montre le schéma suivant, le déploiement continue va plus loin que l'
 
 ### REFLEXION ET APPLICATION D'UNE STRATEGIE DANS MON PROJET
 
+> Hébergement automatisé du front sur Vercel

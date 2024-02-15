@@ -66,25 +66,100 @@ Voici les différentes étapes qui m'ont permi d'installer le linter ESLint dans
 - captures d'écran du code associé (fichier de parametrage + affichage des erreurs)
 
 
-
-
 #### CHOIX ET UTILISATION D'UN OUTIL DE TESTING
-- **Environnement de test (virtuel ou conteneurisé par exemple)**
-- **Au moins des tests unitaires d’intégrés (pas de minimum de coverage)**
-- **Au moins des tests fonctionnels d’intégrés (pas de minimum de coverage)**
-- **Interpréter les résultats et les erreurs**
-
-- à quoi çà sert les tests End To End
-- veille sur 2 ou 3 outils de testing n2n
-- captures d'écran du code associé aux tests e2e (fichier de parametrage + affichage des erreurs avec leur interprétation)
 
 Les tests "End To End" (ou "e2e"), c'est-à-dire "de bout en bout", permettent de vérifier que :
 - la partie frontend d'une application se comporte comme prévu du début à la fin. Le testeur doit se mettre dans la peau d’un utilisateur et dérouler les tests comme s’il utilisait véritablement l’outil mis à sa disposition
 - le frontend est correctement intégré avec le backend ou d'autres webservices.
 
+Les principaux avantages de tests e2e sont :
+- D'augmenter la portée des tests 
+- D'assurer le bon fonctionnement de l’application 
+- Réduire le temps nécessaire à la commercialisation de l’application 
+- Réduire les coûts 
+- Détecter les bogues 
+- Permettre une meilleure expérience client optimale
+
+
 Les tests e2e sont obligatoires car ils sont les seuls tests permettant de vérifier le parfait fonctionnement de l’application du point de vue du métier (c'est-à-dire, que sa valeur pratique est cohérente par rapport à la raison d'être de l'application).
 
 Généralement, les tests e2e doivent être réalisés juste avant la mise en production de l'application.
+
+##### VEILLE SUR LES FRAMEWORKS DE TEST END TO END
+
+Voici une comparaison entre les frameworks de test e2e principaux sur le marché aujourd'hui :
+1. Playwright
+2. Cypress
+
+1. Les avantages de Playwright sont les suivants :
+- C'est un framework de test open-source
+- Il supporte officiellement JavaScript/TypeScript, Python, Java et .Net
+- Il est sensiblement plus rapide que les autres solutions de test end-to-end concurrentes
+- Il offre des tests fiables et proche de la réalité de l'expérience utilisateur (grâce à l'auto-wait) ; par exemple, avant de cliquer sur un élément, il s'assure qu'il soit présent, visible et stable
+- Il est livré avec des outils puissants tels que Trace Viewer (qui capture des informations telles que des instantanés DOM et des screencasts d'exécution de tests permettant d'enquêter sur la raison de l’échec du test), Codegen (qui permet de faciliter l'écriture des tests) et Playwright Inspector (qui permet d'inspecter l'exécution des tests)
+
+2. Les avantages de Cypress sont les suivants :
+- Utilise un vrai navigateur pour faire des tests (offre donc des résultats de l'expérience utilisateur plus réalistes, contrairement à un navigateur "headless" utilisé par les concurrents qui ne font que simuler des navigateurs)
+- A accès à la couche réseau via l'application (pour contrôler toutes les requêtes réseau entrant et sortant de l'application)
+- Prend en compte la visibilité des éléments lors de l'exécution des tests (il sera par exemple impossible de cliquer sur un bouton invisible)
+- Ses commandes sont très intuitives et lisibles
+
+J'ai opté pour le framework de test Playwright car c'est celui que l'on a le plus pratiqué lors de la formation et qu'il donnent lieu à des tests plus robustes, plus faciles à écrire et à maintenir que ses conccurents.
+
+
+##### INSTALLATION ET UTILISATION DE PLAYRIGHT
+
+Une fois la configuration initale terminée (mise à jour d'Ubuntu, installation des dépendances, de NodeJS, etc.), l'installation de Playwright s'effectue en une seule commande (à l'intérieur de mon dossier frontend de mon projet) :
+
+```bash
+npm init playwright@latest
+```
+Répondre aux questions comme suit :
+- Mettre les tests e2e dans un dossier nommé "e2e"
+- Ajouter un workflow avec github actions
+- Installer le navigateur de Playwright, etc. 
+
+
+Voici les étapes à suivre pour utiliser Playwright :
+
+Lancer les tests avec un navigateur "headless" (voir la note en dessous) :
+```bash
+npm run e2e
+```
+ou
+```bash
+npx playwright test
+```
+
+___
+
+**Note :** un navigateur "headless" ("sans tête" en anglais) signifie qu'il peut fonctionner sans interface utilisateur graphique. Le programme de notre application peut lire et interagir avec le navigateur headless, tout comme un utilisateur interagirait avec un navigateur traditionnel.
+
+___
+
+Ensuite, je souhaitais pourvoir vérifier visuellement que les tests sur les éléments d'interface passaient correctement, c'est pourquoi (après avoir un suivi un TP en executant XLaunch et Node JS), j'ai lancé la commande pour lancer les tests en mode UI (avec une interface graphique qui simule le navigateur ouvert) :
+
+```bash
+npx playwright test --ui
+```
+
+Après environ 2 minutes d'attente, voici le message d'erreur qui s'affiche :
+
+![Erreur de test UI](![](../img/ui_tests_error.png "Erreur de test UI")
+
+Afin de résoudre ce problème, j'ai partagé mon répertoire gitHub à une collègue puis j'ai clonné le frontend de mon projet sur son PC (un autre Windows 10) puis, après avoir lancé XLaunch et taper les commandes suivantes :
+
+```bash
+npm install
+npx playwright test --ui
+```
+
+Une interface "Playwright Test" s'est ouverte :
+
+![Interface de test avec Playright](../img/playwrite_test_interface.png "Interface de test avec Playright")
+
+Il n'y a que 2 tests : "has title" et "get started link", qui vérifient respectivement s'il y a un titre dans la page et si l'utilisateur redirigé vers la page d'accueil de l'application.
+
 
 ##### LISTES DES SCENARIOS
 
@@ -174,6 +249,44 @@ Pour chacun des champs de formulaire mentionnés ci-dessus : vérifier que le ch
 Les tests e2e doivent être automatisés car ils sont effectués de façon récurente à chaque push.
 
 
-- **Savoir récupérer la valeur de la couverture du code par les tests** > commande git
+##### TESTS UNITAIRES
 
-- **Exécuter les tests** > "npm run test"
+Les tests unitaires permettent de s’assurer que chaque unité (fonctions, méthodes ou classes) fonctionne comme prévu, indépendamment d’autres parties de l’application. Les tests unitaires doivent être automatisés, reproductibles et rapides à exécuter.
+
+Par manque de temps, et parce que mon backend n'est pas très abouti au moment de la rédaction de ce rapport, j'ai décidé de reporter la mise en place des tests unitaires à plus tard.
+
+J'ai néanmoins appri en les utiliser dans le cadre de TP (notament le "tp-full-tests") en utilisant l'outil de testing Vitest en employant la méthode du "Test Driven Development" (TDD) ou "Red, Green, Refactor" :
+
+![Test Driven Development](../img/test_driven_development.jpg "Test Driven Development")
+
+Voici une courte explication pour chacune de ces phases du TDD :
+1. **Phase rouge :** Le develloppeur ajoute des tests pertinents pour vérifier que un exemple de résultat à obtenir en fonction de certains paramètres en entrée de l'unité testée mais ces tests doivent échouer car cette dernière est soit vide, soit inexistante
+2. **Phase verte :** Le develloppeur implémente l'unité testée et veille à ce qu'elle réponde aux exigences des tests unitaires définis précédement afin que ceux-ci soient progressivement validés
+3. **Refactoring :** Le develloppeur restructure le code de l'unitée testée pour en améliorer la qualité et la maintenabilité tout en veillant à ce que tous les tests unitaires soient toujours validés
+
+___
+
+Voici les étapes à suivre pour installer "Vitest" :
+
+1. Ajouter le script dans le package.json :
+```ts
+"scripts": {
+    ...,
+    "test": "vitest"
+}
+```
+
+2. Lancer les commandes suivantes :
+```bash
+npm i
+npm run test
+npm i -D vitest
+```
+
+3. Dans le dossier src, créer un sous-dossier "__tests__" dans le lequels on va mettre tous nos fichiers de tests (un fichier par unité à tester de préférence) dont l'extention se termine par ".test.ts"
+
+4. Dans le dossier src, les fichiers contenant les fonctions se trouvent dans un sous-dossier "modules"
+
+___
+
+Pour limiter au maximun la dette technique (c'est-à-dire, la méconnaissance de son code), il est nécessaire de connaitre la valeur (en pourcentage) de la couverture du code par les tests unitaires.
