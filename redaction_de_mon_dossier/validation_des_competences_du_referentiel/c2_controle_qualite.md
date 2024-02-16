@@ -2,7 +2,7 @@
 
 ### COMPETENCE(S) CONCERNEE(S) DANS LE REFERENTIEL
 
-C2. Contrôler l'exécution du code source à l’aide de tests et d’outils d’analyses statiques du code source afin de minimiser le risque d’erreur dans un contexte de livraison continue
+**C2. Contrôler l'exécution du code source à l’aide de tests et d’outils d’analyses statiques du code source afin de minimiser le risque d’erreur dans un contexte de livraison continue**
 - Utilisation d’un linter (natif IDE ou externe)
 - Environnement de test (virtuel ou conteneurisé par exemple)
 - Au moins des tests unitaires d’intégrés (pas de minimum de coverage)
@@ -31,13 +31,15 @@ Un linter permet d'analyse les erreurs statiques (c'est-à-dire, sans exécuter 
 - le non respect des bonnes pratiques d'écriture de code
 - les erreurs de syntaxe
 
-Une fois analysé par le linter et corrigé (automatiquement ou manuelement), le code résultant est plus lisible et plus cohérent, ce qui le rend plus facile à maintenir et à déboguer.
+Une fois analysé par le linter et corrigé (automatiquement ou manuellement), le code résultant est plus lisible et plus cohérent, ce qui le rend plus facile à maintenir et à déboguer.
 
 ##### VEILLE TECHNOLOGIQUE SUR LES LINTERS
 
-Dans le cadre de mon projet, j'ai comparé les linters ESLint et JSLint.
+Dans le cadre de mon projet, j'ai comparé les linters suivants :
+1. ESLint
+2. JSLint
 
-Voici les avantages de ESLint :
+1. Voici les avantages de ESLint :
 - c'est le linter JavaScript le plus répandu
 - il est compatible avec la majorité des éditeurs de textes
 - l'affichage des erreurs et les warnings se font directement dans le code
@@ -45,25 +47,17 @@ Voici les avantages de ESLint :
 - il est entièrement personnalisable
 - il peut corriger automatiquement les erreurs
 
-Voici les avantages de JSLint :
+2. Voici les avantages de JSLint :
 - c'est un outil Open Source
 - il est strict et applique un ensemble spécifique de règles pour l’écriture de code JavaScript (il exige par exemples l'utilisation des points-virgules, des accolades autour des déclarations conditionnelles et des boucles, etc.)
 - il est compatible avec plusieurs éditeurs de textes
-
 
 Pour l'analyse statique de mon code, j'ai opté pour le linter ESLint pour sa simplicité d'utilisation et sa compatibilité avec JavaScript et avec mon IDE Visual Studio Code. De plus, l'autre linter comparé (JSLint) est moins flexible que les autres outils d'analyse statique en raison de ses options de personnalisation limitées et il ne convient pas aux projets complexes qui nécessitent plus de flexibilité et beaucoup de personnalisation.
 
 
 ##### INSTALLATION ET UTILISATION DU LINTER 
 
-Voici les différentes étapes qui m'ont permi d'installer le linter ESLint dans mon projet :
--
--
--
--
-
-
-- captures d'écran du code associé (fichier de parametrage + affichage des erreurs)
+Je n'ai malheureseument pas eu le temps d'installer et de configurer un linter dans mon projet mais j'ai néanmoins prévu de le faire plus tard (en utilisant ESLint).
 
 
 #### CHOIX ET UTILISATION D'UN OUTIL DE TESTING
@@ -77,11 +71,10 @@ Les principaux avantages de tests e2e sont :
 - D'assurer le bon fonctionnement de l’application 
 - Réduire le temps nécessaire à la commercialisation de l’application 
 - Réduire les coûts 
-- Détecter les bogues 
+- Détecter les bogues
 - Permettre une meilleure expérience client optimale
 
-
-Les tests e2e sont obligatoires car ils sont les seuls tests permettant de vérifier le parfait fonctionnement de l’application du point de vue du métier (c'est-à-dire, que sa valeur pratique est cohérente par rapport à la raison d'être de l'application).
+Les tests e2e sont obligatoires car ils sont les seuls tests permettant de vérifier le parfait fonctionnement de l’application du point de vue du métier (c'est-à-dire, que ses fonctionnalités sont cohérentes par rapport aux scénarios utilisateur).
 
 Généralement, les tests e2e doivent être réalisés juste avant la mise en production de l'application.
 
@@ -107,7 +100,7 @@ Voici une comparaison entre les frameworks de test e2e principaux sur le marché
 J'ai opté pour le framework de test Playwright car c'est celui que l'on a le plus pratiqué lors de la formation et qu'il donnent lieu à des tests plus robustes, plus faciles à écrire et à maintenir que ses conccurents.
 
 
-##### INSTALLATION ET UTILISATION DE PLAYRIGHT
+##### INSTALLATION ET UTILISATION DE PLAYWRIGHT
 
 Une fois la configuration initale terminée (mise à jour d'Ubuntu, installation des dépendances, de NodeJS, etc.), l'installation de Playwright s'effectue en une seule commande (à l'intérieur de mon dossier frontend de mon projet) :
 
@@ -145,7 +138,7 @@ npx playwright test --ui
 
 Après environ 2 minutes d'attente, voici le message d'erreur qui s'affiche :
 
-![Erreur de test UI](![](../img/ui_tests_error.png "Erreur de test UI")
+![Erreur de test UI](../img/ui_tests_error.png "Erreur de test UI")
 
 Afin de résoudre ce problème, j'ai partagé mon répertoire gitHub à une collègue puis j'ai clonné le frontend de mon projet sur son PC (un autre Windows 10) puis, après avoir lancé XLaunch et taper les commandes suivantes :
 
@@ -156,7 +149,7 @@ npx playwright test --ui
 
 Une interface "Playwright Test" s'est ouverte :
 
-![Interface de test avec Playright](../img/playwrite_test_interface.png "Interface de test avec Playright")
+![Interface de test avec Playwright](../img/playwrite_test_interface.png "Interface de test avec Playwright")
 
 Il n'y a que 2 tests : "has title" et "get started link", qui vérifient respectivement s'il y a un titre dans la page et si l'utilisateur redirigé vers la page d'accueil de l'application.
 
@@ -183,11 +176,14 @@ Voici quelques scénarios utilisateur identitifiés et priorisés par ordre d'im
 - accepte les Conditions Générales d'Utilisation (vérifier que la coche est cochée lorsqu'il clique dessus et réproquement aussi)
 - valide le formulaire (vérifier que lorsque le bouton d'envoi du formulaire est cliqué, cela enregistre bien toutes les informations textuelles et l'image de l'avatar renseignées)
 
+___
+
 **Scénario 2 : "Un utilisateur se connecte à son compte"**
 - Rémy se rend sur l'application "Les As de l'UX" (vérifier que la page de connexion est affichée par defaut lors de l'ouverture de l'application)
 - rempli son mot de passe (vérifier que le champs n'accepte que le type "string" ET vérifier que les carractères sont bien remplacés par des "*" lorsque l'on clique sur le bouton "masquer" et réciproquement aussi)
 - rempli son adresse e-mail (vérifier que le champs n'accepte que le type "e-mail")
 - se connecte à l'application (vérifier que, si l'email et le mot de passe existent dans la base de données, il soit redirigé vers la page "Home" de l'application ET vérifier qu'aucun élément du footer ne soit sélectionné)  
+___
 
 **Scénario 3 : "Un client publie un projet"**
 - Intégration du scénario "Un utilisateur se connecte à son compte"
@@ -206,6 +202,7 @@ Voici quelques scénarios utilisateur identitifiés et priorisés par ordre d'im
 - selectionne le budget (vérifier que la valeur du menu déroulant change bien en fonction de l'option selectionnée ET que l'indication du nombre de participants soit cohérente par rapport à la valeur précédente renseignée)
 - met le projet en favoris
 - valide le formulaire (vérifier que lorsque le bouton d'envoi du formulaire est cliqué, cela enregistre bien toutes les informations textuelles et l'image de la bannière renseignées)
+___
 
 **Scénario 4 : "Un utilisateur publie un commentaire"**
 - Intégration du scénario "Un utilisateur se connecte à son compte"
@@ -221,6 +218,7 @@ Voici quelques scénarios utilisateur identitifiés et priorisés par ordre d'im
 - indique 3 pages concernées par l'anomalie détectée (vérifier que les options selectionnées ont bien l'attribut "checked")
 - publie son commentaire (vérifier que, lorsqu'il clique sur le bouton "publier ma remarque", le commentaire soit bien rajouté dans la sous-rubrique "mes commentaires publiés" en dessous et que le champs de description du problème et des 2 checklists soient réinitialisés)
 - lit la notification à l'écran qui lui indique qu'il a publié un commentaire avec succès et remporté 5 points (vérifier que les 5 points se sont bien rajoutés à son score initial)
+___
 
 **Scénario 5 : "Un client effectue le classement des meilleurs commentaires et télécharge le PDF de l'analyse UX"**
 - Intégration du scénario "Un utilisateur se connecte à son compte"
@@ -233,7 +231,7 @@ Voici quelques scénarios utilisateur identitifiés et priorisés par ordre d'im
 - lit la notification à l'écran qui lui indique qu'il a terminé son classement et qu'il peut télécharger le PDF de l'analyse UX (vérifier que les 5 positions ont été attribuées parmi l'ensemble des commentaires)
 - revient sur la page "analyse ux" (vérifier qu'en cliquant sur le bouton "voir l'analyse UX", il soit bien redirigé vers la page "analyse" correspondante à ce projet)
 - télécharge le PDF comprenant tous les commentaires (vérifier que le bouton "télécharger le PDF de l'analyse" n'est plus grisé et que le PDF comprenant le contenu de la page "classification des commentaires" a bien été téléchargé grâce à l'outil correspondant)
-
+___
 
 **Scénario 6 : "Un utilisateur récupère ses gains"**
 - Intégration du scénario "Un utilisateur se connecte à son compte"
@@ -243,8 +241,9 @@ Voici quelques scénarios utilisateur identitifiés et priorisés par ordre d'im
 - valide le formulaire (vérifier que le champs n'accepte que le type "text" ET que le RIB soit au bon format)
 - lit la notification à l'écran qui lui indique qu'un e-mail de confirmation du virement lui a été envoyé (vérifier que le mail a bien été expédié à l'adresse e-mail de l'utilisateur)
 
+___
 
-Pour chacun des champs de formulaire mentionnés ci-dessus : vérifier que le champs est surligné lorsqu'il clique dessus et qu'il revient à son état initial lorsqu'il clique en dehors du champs
+Pour chacun des champs de formulaire mentionnés ci-dessus : vérifier que le champs est surligné lorsqu'il clique dessus et qu'il revient à son état initial lorsqu'il clique en dehors du champs.
 
 Les tests e2e doivent être automatisés car ils sont effectués de façon récurente à chaque push.
 

@@ -2,17 +2,17 @@
 
 ### REMERCIEMENTS
 
-Tout d'abord, je tiens à remercier toute l'équipe pédagogique pour l'aide qu'ils m'ont apporté entre autre dans la réalisation de la partie DevOps de mon projet de fin d'étude que je vais aborder plus bas.
+Tout d'abord, je tiens à remercier toute l'équipe pédagogique pour l'aide qu'ils m'ont apportée entre autre dans la réalisation de la partie DevOps de mon projet de fin d'étude que je vais aborder plus bas.
 
 ### CONTEXTE DU PROJET
 
-Dans le cadre de la formation "Concepteur Develloppeur d'Application DevOps" au sein de l'organisme SIMPLON, nous avions un projet chef-d'oeuvre à réaliser de A à Z sous la forme d'une application web.
+Dans le cadre de la formation "Concepteur / Développeur d'Application DevOps" au sein de l'organisme SIMPLON, nous avions un projet chef-d'oeuvre à réaliser de A à Z sous la forme d'une application web.
 
 Nous avons démarré ce projet relativement tôt dans le cours de l'année, ce qui nous a permi de mettre en pratique progressivement les compétences théoriques acquises.
 
 ### OBJECTIF DE CE DOSSIER
 
-Mon objectif est de vous montrer que j'ai compris tout l'intéret d'utiliser la méthodologie DevOps dans ce projet chef d'oeuvre au travers d'explications détaillées sur le rôle de chaque outil du DevOps que j'ai mis en place concrètement.
+Mon objectif est de vous montrer que j'ai compris tout l'intérêt d'utiliser la méthodologie DevOps dans ce projet au travers d'explications détaillées sur le rôle de chaque outil du DevOps que j'ai mis en place concrètement (ou que je prévois d'utiliser plus tard).
 
 ### COMPOSITION DE L'EQUIPE
 
@@ -20,9 +20,9 @@ L’apprenant Jérémy FELIX a réalisé l’ensemble de ce projet chef-d’œuv
 
 ### RESUME DU PROJET
 
-L’application “Les As de l’UX” permet principalement de mettre en relation des chargés de création / refontes de site web (ou d’applications) avec les autres utilisateurs de l’application (amateurs et professionnels de l’UX design) afin de recueillir plusieurs avis extérieurs et constructifs (suivant le concept de l’intelligence collective) pour guider la mise en place de changements liés à l'UX (destinés à être regroupés dans un PDF) design en d'améliorer les produits numériques existants sur le marché,
+L’application “Les As de l’UX” permet principalement de mettre en relation des chargés de création / refontes de site web (ou d’applications) avec les autres utilisateurs de l’application (amateurs et professionnels de l’UX design) afin de recueillir plusieurs avis extérieurs et constructifs (suivant le concept de l’intelligence collective) pour guider la mise en place de changements (destinés à être regroupés dans un PDF) pour améliorer l'UX Design les produits numériques existants sur le marché.
 
-Mon modèle économique est simple : le client verse un somme d'argent sur un compte "Les As de l'UX" pour mettre en ligne son projet puis, une fois que le nomre maximum de commentaire a été atteint, le client selectionne les 5 meilleurs commentaires selon lui ; ce qui permet 1) aux commentateurs concerné de recevoir une partie de la somme itialement versée, 2) à "Les As de l'UX" de se dégager une marge avec l'argent restant et 3) que le client puisse télécharger le PDF de l'analyse UX globale sur son projet.
+Mon modèle économique est simple : le client verse un somme d'argent sur un compte "Les As de l'UX" pour mettre en ligne son projet puis, une fois que le nomre maximum de commentaires a été atteint, le client selectionne les 5 meilleurs commentaires selon lui ; ce qui permet 1) aux commentateurs concernés de recevoir une partie de la somme itialement versée, 2) à "Les As de l'UX" de se dégager une marge avec l'argent restant et 3) que le client puisse télécharger le PDF de l'analyse UX globale sur son projet.
 
 ### LISTE DES COMPETENCES DU REFERENTIEL
 
@@ -55,16 +55,16 @@ Mon modèle économique est simple : le client verse un somme d'argent sur un co
 - Adapter toute la chaîne DevOps à cette nouveauté
 
 #### C6. Concevoir un système de veille technologique permettant la collecte, la classification, l’analyse et la diffusion de l’information aux différents acteurs de l’organisation afin d’améliorer la prise de décisions techniques
-- définir des objectifs à sa veille ou encore des thématiques de veille
-- planifier les temps de veille : durée, fréquence
-- organiser sa collecte d’information : outils de curation, outils de sauvegarde, etc
-- organiser le partage voir la diffusion des informations pertinantes
+- Définir des objectifs à sa veille ou encore des thématiques de veille
+- Planifier les temps de veille : durée, fréquence
+- Organiser sa collecte d’information : outils de curation, outils de sauvegarde, etc
+- Organiser le partage voir la diffusion des informations pertinantes
 
 #### C7. Accompagner les collaborateurs au sein de l’équipe projet dans la sensibilisation et l’acculturation des méthodes d’organisation et de production DevOps de manière à optimiser le cycle de livraison d’un projet
-- expliquer et partager la culture DevOps
-- expliquer et partager la méthode DevOps : les rôles, les outils, les leviers, etc
-- analyser un processus Devops
-- préconiser des améliorations à un processus DevOps
+- Expliquer et partager la culture DevOps
+- Expliquer et partager la méthode DevOps : les rôles, les outils, les leviers, etc
+- Analyser un processus Devops
+- Préconiser des améliorations à un processus DevOps
 
 ### STRUCTURATION DES PARTIES DE VALIDATION DU REFERENTIEL
 
@@ -72,4 +72,3 @@ Pour chacune des parties, je préciserai :
 - Compétence(s) concernée(s) dans le référentiel
 - L’objectif principal de cette phase du projet
 - Réflexion et application d'une stratégie dans mon projet
-

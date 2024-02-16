@@ -2,7 +2,7 @@
 
 ### COMPETENCE(S) CONCERNEE(S) DANS LE REFERENTIEL
 
-C3. Automatiser les phases de tests unitaires et d’analyses statiques du code source lors du partage des sources à l’aide d’un outil d’intégration continue de manière à prévenir les erreurs potentielles
+**C3. Automatiser les phases de tests unitaires et d’analyses statiques du code source lors du partage des sources à l’aide d’un outil d’intégration continue de manière à prévenir les erreurs potentielles**
 - Configurer l’intégration continue, avec Github Actions ou Gitlab CI/CD
 - Paramétrer les phases d'exécution des tests dans l’environnement de test à chaque push (sur la branche concernée)
 
@@ -28,7 +28,7 @@ Voici un schéma qui résume les différentes étapes de l'intégration continue
 
 ##### AVANTAGES
 
-L'avantape principal de la dockerisation est pouvoir créer des environnements isolés sur un seul et même système (ce qui évite aussi d'utiliser des machines virtuelles qui requièrent beaucoup de mémoire vive et de performance). Cela permet ensuite de déployer en ligne des versions complètes et indépendantes d'une partie cohérente d'une application (ex. : le frontend ou le backend).
+L'avantage principal de la dockerisation est pouvoir créer des environnements isolés sur un seul et même système (ce qui évite aussi d'utiliser des machines virtuelles qui requièrent beaucoup de mémoire vive et de performance). Cela permet ensuite de déployer en ligne des versions complètes et indépendantes d'une partie cohérente d'une application (ex. : le frontend ou le backend).
 
 Une image Docker est constituée d’une collection de fichiers qui regroupent tous les éléments essentiels (tels que les installations, le code d’application et les dépendances) nécessaires à la configuration d’un conteneur déployable entièrement opérationnel.
 
@@ -218,7 +218,7 @@ Le fichier de configuration qui gère l'automatisation de l'intégration continu
 
 ![Fichier playwright.yml](../img/fichier_config_ci_frontend.png "Fichier playwright.yml")
 
-Le contenu de ce fichier est interprété par gitHub qui s'occupe d'interpreter le contenu de ce fichier playwright.yml une fois que l'on pousse le répertoire local sur le répertoire distant.
+Le contenu de ce fichier est interprété par GitHub qui s'occupe d'interpreter le contenu de ce fichier playwright.yml une fois que l'on pousse le répertoire local sur le répertoire distant.
 
 Ce qu'il y a dans le "on" indique dans quelles circonstances la CI se déclenche : 
 - Lors du push de la branche "main" ou la branche "develop"

@@ -2,11 +2,11 @@
 
 ### COMPETENCE(S) CONCERNEE(S) DANS LE REFERENTIEL
 
-C7. Accompagner les collaborateurs au sein de l’équipe projet dans la sensibilisation et l’acculturation des méthodes d’organisation et de production DevOps de manière à optimiser le cycle de livraison d’un projet
-- expliquer et partager la culture DevOps
-- expliquer et partager la méthode DevOps : les rôles, les outils, les leviers, etc
-- analyser un processus Devops
-- préconiser des améliorations à un processus DevOps
+**C7. Accompagner les collaborateurs au sein de l’équipe projet dans la sensibilisation et l’acculturation des méthodes d’organisation et de production DevOps de manière à optimiser le cycle de livraison d’un projet**
+- Expliquer et partager la culture DevOps
+- Expliquer et partager la méthode DevOps : les rôles, les outils, les leviers, etc
+- Analyser un processus Devops
+- Préconiser des améliorations à un processus DevOps
 
 
 ### OBJECTIF PRINCIPAL DE CETTE PHASE DU PROJET
@@ -15,7 +15,13 @@ Avant l'apparition de la culture DevOps, les entreprises dans l'informatique fon
 - La première, l'équipe de développement, a pour objectif principal de faire évoluer l'application, en ajoutant de nouvelles fonctionnalités ou en corrigeant des bugs, le plus rapidement possible et cela, dans un délai et un coût moindres, souvent au détriment de la qualité quand les contraintes de planning arrivent
 - La seconde équipe, l'équipe des opératifs, a comme objectif de maintenir l'application en conditions opérationnelles, en garantissant sa stabilité et sa qualité
 
+___
+
+Schéma de cycle en "V" qui réprésente l'ancien fonctionnement très rigide (sans chevauchement des taches possible) avant l'apparition de l'Agilité :
+
 ![Cycle en V](../img/cycle_en_v.png "Cycle en V")
+
+___
 
 Vers le début du 21ème siècle, le manifeste Agile a été rédigé pour élaborer une nouvelle manière de travailler dans le developpement web, dont voici les 4 grands piliers :
 - Les individus et les interactions plus que les processus et les outils

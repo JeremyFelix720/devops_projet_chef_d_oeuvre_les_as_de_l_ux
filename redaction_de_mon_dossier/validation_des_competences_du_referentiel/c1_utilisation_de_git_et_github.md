@@ -2,7 +2,7 @@
 
 ### COMPETENCE(S) CONCERNEE(S) DANS LE REFERENTIEL
 
-C1. Assurer le versionnement d’un code source d’une application organisée en fonctionnalités et lots à l’aide d’un logiciel de contrôle de version de manière à garantir la fiabilité du code source dans un environnement multi-contributeurs
+**C1. Assurer le versionnement d’un code source d’une application organisée en fonctionnalités et lots à l’aide d’un logiciel de contrôle de version de manière à garantir la fiabilité du code source dans un environnement multi-contributeurs**
 - Les sources sont versionnées avec Git
 - Git en ligne de commande
 - Respect d’un gitflow
@@ -11,28 +11,32 @@ C1. Assurer le versionnement d’un code source d’une application organisée e
 
 ### OBJECTIF PRINCIPAL DE CETTE PHASE DU PROJET
 
-intéret de git / gitHub + gitflow + des branches +
+L'utilisation d'un outil de versionning (tel que git) et d'une plateforme de dépot de code source en ligne (tel que GitHub) permet à chaque développeur de disposer d’une copie complète du projet et de l’historique du projet.
+
+Contrairement aux systèmes de gestion de versions centralisés autrefois populaires, les systèmes VCS distribués n’ont pas besoin d’une connexion constante à un dépôt central (chacun peut travailler un local sur une version à jour du code source collectif).
+
+Git est le système de gestion de versions distribué le plus populaire et il est couramment utilisé pour le développement de logiciels open source et commerciaux, avec des avantages significatifs pour les individus, les équipes et les entreprises.
 
 
 #### UTILISATION DES BRANCHES
 
-L’objectif principal de la stratégie de création de branches est de permettre à plusieurs développeurs de travailler sur différentes fonctionnalités et améliorations de la base de code, sans interférer avec le travail des autres développeurs.
+La stratégie de création de branches permet à plusieurs développeurs de travailler sur différentes fonctionnalités et améliorations de la base de code, sans interférer avec le travail des autres développeurs.
 
 Voici les principaux avantages :
 
-- Plusieurs développeurs peuvent travailler sur la même base de code en parallèle, chacun sur leur branche de travail respective, en évitant les conflits et les problèmes de fusion.
+- Plusieurs développeurs peuvent travailler sur la même base de code en parallèle, chacun sur leur branche de travail respective, en évitant les conflits et les problèmes de fusion
 
-- Les développeurs peuvent apporter des modifications plus rapidement et plus efficacement sans se soucier d’interrompre le travail des autres développeurs.
+- Les développeurs peuvent apporter des modifications plus rapidement et plus efficacement sans se soucier d’interrompre le travail des autres développeurs
 
-- Les modifications de la base de code sont correctement testées et vérifiées avant d’être fusionnées dans la branche principale. Cela permet de maintenir la qualité du code et réduit le risque de bugs et d’erreurs.
+- Les modifications de la base de code sont correctement testées et vérifiées avant d’être fusionnées dans la branche principale. Cela permet de maintenir la qualité du code et réduit le risque de bugs et d’erreurs
 
-- Possibilité de suivre les différentes versions du code source. Cela permet de dépanner et de revenir aux versions précédentes facilement.
+- Possibilité de suivre les différentes versions du code source. Cela permet de dépanner et de revenir aux versions précédentes facilement
 
-- Modifications effectuées sans affecter la base de code principale. Cela réduit considérablement le risque d’introduction de bugs et d’erreurs dans la production.
+- Modifications effectuées sans affecter la base de code principale. Cela réduit considérablement le risque d’introduction de bugs et d’erreurs dans la production
 
-- Expérimentation de nouvelles fonctionnalités et idées sans casser le code source et ne intégration des branches dans la branche principale que si elles fonctionnent parfaitement.
+- Expérimentation de nouvelles fonctionnalités et idées sans casser le code source et ne intégration des branches dans la branche principale que si elles fonctionnent parfaitement
 
-- Meilleure communication entre les développeurs pour discuter des modifications plus facilement lors des Code Review (c'est-à-dire, l'examen systématique du code source d'un logiciel par des tiers dont le but est de trouver des bugs ou des vulnérabilités).
+- Meilleure communication entre les développeurs pour discuter des modifications plus facilement lors des Code Review (c'est-à-dire, l'examen systématique du code source d'un logiciel par des tiers dont le but est de trouver des bugs ou des vulnérabilités)
 
 
 ### REFLEXION ET APPLICATION D'UNE STRATEGIE DANS MON PROJET
@@ -40,11 +44,11 @@ Voici les principaux avantages :
 
 #### GESTION DE PROJET
 
-Pour me permettre de diviser le travail en plusieurs petits bouts de fonctionnalité cohérents est l'outil de gestion de projet Trello. J'ai spécifiquement utilisé la méthodologie Agile KANBAN en réalisant plusieurs colonnes dans lesquelles j'ai rajouté au fur et à mesure des "tickets" datés comme on peut le voir sur la capture d'écran suivante :
+Pour me permettre de diviser le travail en plusieurs petits bouts de fonctionnalité cohérents, j'ai utilisé l'outil de gestion de projet Trello avec la méthodologie Agile KANBAN en réalisant plusieurs colonnes dans lesquelles j'ai rajouté au fur et à mesure des "tickets" datés comme on peut le voir sur la capture d'écran suivante :
 
-> Capture d'écran du tableau kanban sur Trello
+![Tableau KANBAN](../img/tableau_kanban_au_16-02-2024.png "Tableau KANBAN")
 
-Les branches de fonctionnalité que j'ai créées découlent naturelement des tickets référencés sur Trello.
+Les branches de fonctionnalité que j'ai créées dans mon code découlent naturellement des tickets référencés sur Trello.
 
 
 #### ENVIRONNEMENT DE DEVELOPPEMENT
@@ -58,13 +62,23 @@ Un workflow Git est une recette ou une recommandation expliquant comment utilise
 
 Pour m'aider à respecter une méthodologie de gitflow, j'ai installé l'extenssion "Git Graph" sur mon IDE afin de pouvoir visualiser les différentes branches et sous-branches ainsi que les commits qui leur sont associés.
 
-> Capture d'écran de git Graph
+___
 
+Capture d'écran de l'interface de Git Graph du frontend de mon projet :
 
-Etant seul dans le cadre de ce projet, j'ai décider d'autovalider les pull requests sur GitHub mais cela ne m'a pas empecher de travailler de façon structurée (comme si j'étais en groupe) en créant des branches de fonctionnalité sur une branche develop (une sous-branche de main) pour y integrer les évolutions constantes du code source (avec potentielement des erreurs s'y greffer) et pas directement dans la branche main qui doit être réservée à la mise en production (avec une version stable de l'application, sans anomalie et avec un ensemble de fonctionnalité cohérent et suffisant pour le déployer en ligne sans mauvaise surprise).
+![Git Graph du frontend](../img/git_graph_frontend.png "Git Graph du frontend")
 
-> schéma branches main / dev / autres branches
+___
 
+Capture d'écran de l'interface de Git Graph du backend de mon projet :
+
+![Git Graph du backend](../img/git_graph_backend.png "Git Graph du backend")
+
+___
+
+Etant seul dans le cadre de ce projet, j'ai décidé d'autovalider les pull requests sur GitHub mais cela ne m'a pas empeché de travailler de façon structurée (comme si j'étais en groupe) en créant des branches de fonctionnalité sur une branche develop (une sous-branche de main) pour y integrer les évolutions constantes du code source (avec potentielement des erreurs qui viennent s'y greffer) et pas directement dans la branche main qui doit être réservée à la mise en production (avec une version stable de l'application, sans anomalie, avec un ensemble cohérent de fonctionnalités et suffisant pour le déployer en ligne sans mauvaise surprise).
+
+___
 
 Voici la procédure que j’ai appliquée pour envoyer une branche de fonctionnalité sur GitHub afin d’effectuer la validation collective (uniquement lorsqu'une branche de travail est entièrement terminée) :
 
@@ -74,7 +88,8 @@ Rejoindre la branche "develop" :
 ```bash
 git checkout develop
 ```
-Permet de récupérer les dernieres modifications sur la branche develop depuis la branche develop du dépôt distant
+
+Récupérer les dernieres modifications sur la branche develop depuis la branche develop du dépôt distant :
 ```bash
 git pull origin develop 
 ```
@@ -84,12 +99,12 @@ Rejoindre sa branche de travail :
 git checkout fonctionnality_branch_name
 ```
 
-Fusion de ma branche de fonctionnalité avec la branche "develop" en local :
+Fusionner ma branche de fonctionnalité avec la branche "develop" en local :
 ```bash
 git rebase develop  # contrairement à git merge, git rebase ne supprime pas les commits.
 ```
 
-Export de ma fonctionnalité (rajoutée au develop) dans le develop du répertoire distant :
+Exporter ma branche de fonctionnalité dans le répertoire distant :
 ```bash
 git push --set-upstream origin fonctionnality_branch_name
 ```
@@ -104,13 +119,13 @@ Sur GitHub :
 - Vérifier le code au préalable
 - Cliquer sur "Merge pull request" puis "Confirm merge"
 
-Si la pull request de ma fonctionnalité a été validé à l'unanimité sur gitHub, mettre à jour la branche develop locale qui a été fusionnée sur gitHub :
+Si la pull request de ma fonctionnalité a été validée à l'unanimité sur GitHub, mettre à jour la branche develop locale qui a été fusionnée sur GitHub :
 ```bash
 git checkout develop
 git pull origin develop
 ```
 
-Supprimer de la branche fonctionnalité :
+Supprimer la branche de fonctionnalité locale :
 ```bash
 git branch -d fonctionnality_branch_name
 ```
@@ -120,18 +135,29 @@ Passer au ticket suivant en recréant une nouvelle branche de fonctionnalité à
 
 #### ORGANISATION DES DOSSIERS
 
-
 Pour simplifier l'organisation de mon travail, j'ai décomposé mon projet en plusieurs "microservices" (aux contenus cohérents mais plus réduits), c'est-à-dire des répertoires en local (frontend, backend et documentation), qui sont tous reliés à des répertoires distants aux contenus équivalents.
 
-> Capture d'écran des repo gitHub
+___
+Capture d'écran du répertoire pour le frontend hébergé sur gitHub :
+
+![Répertoire gitHub du frontend](../img/repo_github_frontend_au_16-02-2024.png "Répertoire gitHub du frontend")
+___
+
+Capture d'écran des branches sur GitHub de la partie frontend :
+
+![Répertoire GitHub du frontend](../img/branches_github_frontend_au_16-02-2024.png "Répertoire GitHub du frontend")
+___
+
+De plus, j'ai créé un 3ème répertoire sur GitHub pour sauvegarder tous les documents en lien avec la gestion de mon projet chef-d'oeuvre.
 
 
 #### VERSIONNEMENT DU CODE SOURCE
 
-Pour pouvoir revenir facilement en arrière lorsqu’un bug survient, j'ai pris l'habitude de faire des commits (sauvegarde du code en local) afin de conserver un historique des modifications effectuées dans le code, comme en témoigne la capture d'écran suivante :
+Pour pouvoir revenir facilement en arrière lorsqu’un bug survient, j'ai pris l'habitude de faire des commits (sauvegarde du code en local) afin de conserver un historique des modifications effectuées dans le code, comme en témoigne la capture d'écran suivante (après avoir tapé la commande ```git log``` dans le terminal) :
 
-> capture d'écran avec la commande "git log"
+![Historique des commits de la branche des tests e2e de la partie frontend](../img/historique_des_commits_de_la_branche_tests_end_to_end_du_frontend.png "Historique des commits de la branche des tests e2e de la partie frontend")
 
+___
 
 Pour me rappeler de faire des commits régulièrement (à chaque ajout de code fonctionnel et cohérent), j’ai lancé un timmer en arrière-plan qui émet un « bip » tous les 15 minutes.
 
@@ -147,12 +173,12 @@ Cloner un répertoire :
 git clone https://github.com/nom_depositaire/repository_name my_project_name 
 ```
 
-Créer une branche de travail sur le dépot local (pour developper une fonctionnalité correspondant à un ticket)
+Créer une branche de travail sur le dépot local (pour developper une fonctionnalité correspondant à un ticket) :
 ```bash
 git branch fonctionnality_branch_name
 ```
 
-Créer une branche de travail sur le dépot distant (à partir d'une branche locale existante)
+Créer une branche de travail sur le dépot distant (à partir d'une branche locale existante) :
 ```bash
 git push --set-upstream origin develop
 ```
@@ -215,3 +241,5 @@ ou
 ```bash
 git reset --soft branch_name
 ```
+
+Etc.

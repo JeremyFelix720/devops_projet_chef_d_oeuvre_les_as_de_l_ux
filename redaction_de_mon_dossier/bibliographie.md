@@ -1,5 +1,7 @@
 ## 4 - BIBLIOGRAPHIE
 
+https://docs.github.com/fr/get-started/using-git/about-git
+
 https://www.bocasay.com/fr/strategie-creation-branches-expliquee/
 
 https://www.all4test.fr/blog-du-testeur/tests-end-to-end-e2e-guide-complet-2022/
